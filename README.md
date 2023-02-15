@@ -6,7 +6,7 @@ Welcome to this repository which contains a collection of Next.js projects, each
 
 The projects in this repository are designed to showcase different features and capabilities of the Next.js framework. Here is a list of some of the projects included in this repository:
 
-- **/routing**: Dynamic Routing and its use cases
+- **[/routing](https://github.com/tkmpraveens/nextjs-learning/tree/main/routing)**: Dynamic Routing and its cases
 - Server-side rendering
 - Static site generation
 - API integration
