@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const HomePage = () => {
-  const linkList = ["", "portfolio", "client", "blog", "about"];
+  const linkList = ["portfolio", "client", "blog", "about"];
 
   return (
     <main className="main">
@@ -11,7 +11,7 @@ const HomePage = () => {
           return (
             <li key={i}>
               <Link className="link" href={`/${link}`}>
-                {`${link ? link : "home"} Page`}
+                {link} Page
               </Link>
             </li>
           );
