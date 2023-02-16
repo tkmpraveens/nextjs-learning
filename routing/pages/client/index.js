@@ -1,30 +1,15 @@
-import { useRouter } from "next/router";
-
 import Link from "next/link";
 
 const ClientPage = () => {
-  const router = useRouter();
-  console.log(router.pathname, router.query);
-
-  const clientId = "tesla";
-  const projectId = "model x";
-
   return (
-    <div>
-      <h1>Client Page</h1>
-      <Link href={`/client/${clientId}/${projectId}`}>
-        Read about project from the client
-      </Link>
-
-      <Link
-        href={{
-          pathname: "/client/[clientId]/[projectId]",
-          query: { clientId, projectId },
-        }}
-      >
-        Read about project from the client
-      </Link>
-    </div>
+    <main className="main">
+      <h1>Client page</h1>
+      <section>
+        <Link className="link" href={`/client/list`}>
+          See the list of Clients
+        </Link>
+      </section>
+    </main>
   );
 };
 

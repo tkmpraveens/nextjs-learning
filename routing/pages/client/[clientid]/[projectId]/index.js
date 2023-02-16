@@ -1,10 +1,17 @@
 import { useRouter } from "next/router";
 
-const ClientProjectDetailPage = () => {
+const ClientProjectPage = () => {
   const router = useRouter();
-  console.log(router.pathname, router.query);
 
-  return <h1>Client Project Detail Page</h1>;
+  return (
+    <main className="main">
+      <h1 className="title">Client Project Page</h1>
+      <section>
+        <p>Pathname: {JSON.stringify(router.pathname)}</p>
+        <p>Query: {JSON.stringify(router.query)}</p>
+      </section>
+    </main>
+  );
 };
 
-export default ClientProjectDetailPage;
+export default ClientProjectPage;
