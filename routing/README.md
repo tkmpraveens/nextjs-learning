@@ -1,13 +1,13 @@
 # Next.js Pages and file based routing
 
-## File-Based Routing:
+## File Based Routing:
 
 - Each page is represented by a file.
 - `pages` directory should include an `index.js` file to represent the root URL `/` route.
 
 <br/>
 
-### Static Route:
+### Static Routes:
 
 To create a route with a specific file name, you must create a file with a `.js` or `.tsx` extension inside the pages directory.
 <br/>
@@ -21,7 +21,7 @@ _Note:_ Casing of static file paths should be in lowercase.
 
 <br/>
 
-### Nested Path:
+### Nested Paths:
 
 To create a nested route, create another .js file in a folder within the pages directory.
 <br/>
@@ -63,7 +63,7 @@ For example, to create the `/client/[clientId]/[projectId]` route, we need to cr
 
 <br/>
 
-### Catch All Routes:
+### Catch-All Routes:
 
 A catch-all route is used to match dynamic routes with variable paths. It's indicated by using three dots `(...)` followed by a parameter name in the file name inside a folder within the `pages` directory.
 
@@ -75,7 +75,7 @@ Instead of using a file named `[...slug].js`, you can create a folder named `[..
 
 <br/>
 
-## Navigating to Dynamic Routes:
+## Navigation of Static and Dynamic Routes:
 
 ### Navigating Using Link:
 
