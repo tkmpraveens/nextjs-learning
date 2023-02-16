@@ -7,7 +7,7 @@
 
 <br/>
 
-### **Static Route:**
+### Static Route:
 
 To create a route with a specific file name, you must create a file with a `.js` or `.tsx` extension inside the pages directory.
 <br/>
@@ -21,7 +21,7 @@ _Note:_ Casing of static file paths should be in lowercase.
 
 <br/>
 
-### **Nested Path:**
+### Nested Path:
 
 To create a nested route, create another .js file in a folder within the pages directory.
 <br/>
@@ -29,7 +29,7 @@ For example, creating another `.js` file, such as `list.js`, within the portfoli
 
 <br/>
 
-### **Dynamic Routes:**
+### Dynamic Routes:
 
 To create a dynamic route, create a file with square brackets in the filename such as [id].js. This will create a route that can match any value within the brackets, such as `/client/tesla` or `/client/google`. Here the key `id` will have the value `tesla` or `google`.
 
@@ -37,7 +37,7 @@ _Note:_ If the `client` folder contains a file named `list.js` along with `[id].
 
 In a dynamic route, the query parameters are not case sensitive. You can use camel case, such as `clientId`, for the parameter name. This can make the parameter name more readable and easier to understand.
 
-**Extracting Dynamic Path Segment Data:**
+**Extracting Dynamic Path Segment Data:**<br/>
 By using `useRouter` hook from `next/router`, we can extract values such as pathname or query.
 
 ```js
@@ -55,7 +55,7 @@ export default ClientDetailPage;
 
 <br/>
 
-### **Nested Dynamic Routes:**
+### Nested Dynamic Routes:
 
 By creating a dynamic folder or file within a nested dynamic folder, we can create routes with multiple dynamic segments that can change dynamically based on user input.
 
@@ -63,7 +63,7 @@ For example, to create the `/client/[clientId]/[projectId]` route, we need to cr
 
 <br/>
 
-### **Catch All Routes:**
+### Catch All Routes:
 
 A catch-all route is used to match dynamic routes with variable paths. It's indicated by using three dots `(...)` followed by a parameter name in the file name inside a folder within the `pages` directory.
 
@@ -72,3 +72,88 @@ For example, with the `/blog/[...slug].js` folder structure, the `slug` paramete
 _Note:_ If the `blog` folder contains a file named `list.js` along with `[...slug].js`, the former will be considered a static route with the path `blog/list`.
 
 Instead of using a file named `[...slug].js`, you can create a folder named `[...slug]` and place an `index.js` file inside it. If there is another file called `list.js` inside the `[...slug]` folder, `blog/list` will be treated as a catch-all route with the path `blog/[...slug]` and the server will throw an error with the message `Error: Catch-all must be the last part of the URL.`
+
+<br/>
+
+## Navigating to Dynamic Routes:
+
+### Navigating Using Link:
+
+Using the Link component from the next/link module, we can navigate to multiple routes by providing the href argument.
+
+For example, for blog posts with the URL path `/client/[clientId]/[projectId]`, we can implement the following code:
+
+```js
+import Link from "next/link";
+
+const ClientProjectLink = ({ clientId, projectId }) => {
+  return (
+    <Link href={`/client/${clientId}/${projectId}`}>
+      Read about project from the client
+    </Link>
+  );
+};
+
+export default ClientProjectLink;
+```
+
+<br/>
+
+**`as` param in Link Component:**<br/>
+The Link component can also be used with the `as` prop, as shown below:
+
+```js
+<Link
+  href="/client/[clientId]/[projectId]"
+  as={`/client/${clientId}/${projectId}`}
+>
+  Read about project from the client
+</Link>
+```
+
+The `as` prop enables us to pass the URL pathname to be used in the browser's address bar, while the actual URL with parameters is provided as the href prop. This allows us to use a human-readable URL for our dynamic routes.
+
+<br/>
+
+**Alternative Approach using `pathname` and `query`:**<br/>
+The pathname and query can be passed to href as an object instead of a concatenated URL, as follows:
+
+```js
+<Link
+  href={{
+    pathname: "/client/[clientId]/[projectId]",
+    query: { clientId, projectId },
+  }}
+>
+  Read about the project from the client
+</Link>
+```
+
+<br/>
+
+### Navigating Using Router:
+
+To pass the dynamic URL, we can use the `push` method from the `useRouter` hook as follows:
+
+```js
+import { useRouter } from "next/router";
+
+const router = useRouter();
+router.push(`/client/${clientId}/${projectId}`);
+```
+
+<br/>
+
+**Alternative Approach using `pathname` and `query`:**<br/>
+The `pathname` and `query` can be passed to the `push` method of the `useRouter` hook as an object instead of a concatenated URL, as shown below:
+
+```js
+router.push({
+  pathname: "/client/[clientId]/[projectId]",
+  query: { clientId, projectId },
+});
+```
+
+## 404 page:
+
+Next.js provides a default `404` page, but we can customize it by creating a file named `404.js` in the `pages` directory. When Next.js cannot find a matching route, it will automatically render this page.
