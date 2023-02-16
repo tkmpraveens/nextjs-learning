@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+.main {
+  font-family: "Inter", sans-serif;
+  padding-left: 15px;
+}
+.title {
+  font-weight: 600;
+}
+ul {
+  display: grid;
+  gap: 1rem;
+  padding-left: 15px;
+}
+
+li {
+  all: unset;
+}
+
+a {
+  color: #27ae60;
+  text-transform: capitalize;
+}

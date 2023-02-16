@@ -7,8 +7,14 @@ const PortfolioDetailPage = () => {
     <main className="main">
       <h1 className="title">Portfolio Detail Page</h1>
       <section>
-        <p>Pathname: {JSON.stringify(router.pathname)}</p>
-        <p>Query: {JSON.stringify(router.query)}</p>
+        <p>
+          <b>Pathname: </b>
+          {JSON.stringify(router.pathname)}
+        </p>
+        <p>
+          <b>Query: </b>
+          {JSON.stringify(router.query)}
+        </p>
       </section>
     </main>
   );
