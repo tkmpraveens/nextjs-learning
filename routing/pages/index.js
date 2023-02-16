@@ -1,5 +1,24 @@
+import Link from "next/link";
+
 const HomePage = () => {
-  return <h1>Home Page</h1>;
+  const linkList = ["", "portfolio", "client", "blog", "about"];
+
+  return (
+    <main className="main">
+      <h1 className="title">Home Page</h1>
+      <ul>
+        {linkList.map((link, i) => {
+          return (
+            <li key={i}>
+              <Link className="link" href={`/${link}`}>
+                {`${link ? link : "home"} Page`}
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+    </main>
+  );
 };
 
 export default HomePage;
