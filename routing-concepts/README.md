@@ -1,4 +1,7 @@
-# Next.js Pages and file based routing [[Live Demo]](https://nextjs-learning-routing-concepts.netlify.app)
+# Next.js Pages and file based routing
+
+### Live
+[nextjs-learning-routing-concepts.netlify.app](https://nextjs-learning-routing-concepts.netlify.app)
 
 ## File Based Routing:
 
