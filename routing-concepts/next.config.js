@@ -1,4 +1,4 @@
 module.exports = {
   basePath: "/nextjs-learning",
-  assetPrefix: "",
+  assetPrefix: "/nextjs-learning/",
 };
