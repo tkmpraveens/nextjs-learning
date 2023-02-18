@@ -3,6 +3,8 @@
 ### Live
 [nextjs-learning-routing-concepts.netlify.app](https://nextjs-learning-routing-concepts.netlify.app)
 
+<br/>
+
 ## File Based Routing:
 
 - Each page is represented by a file.
