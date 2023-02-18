@@ -6,15 +6,15 @@ Welcome to this repository which contains a collection of Next.js projects, each
 
 The projects in this repository are designed to showcase different features and capabilities of the Next.js framework. Here is a list of some of the projects included in this repository:
 
-- **[/routing](https://github.com/tkmpraveens/nextjs-learning/tree/main/routing)**: File based routing
-  - [Pages](https://github.com/tkmpraveens/nextjs-learning/blob/main/routing/README.md#file-based-routing)
-  - [Static routes](https://github.com/tkmpraveens/nextjs-learning/blob/main/routing/README.md#static-routes)
-  - [Nested paths](https://github.com/tkmpraveens/nextjs-learning/blob/main/routing/README.md#nested-paths)
-  - [Dynamic routes](https://github.com/tkmpraveens/nextjs-learning/blob/main/routing/README.md#dynamic-routes)
-  - [Nested dynamic routes](https://github.com/tkmpraveens/nextjs-learning/blob/main/routing/README.md#nested-dynamic-routes)
-  - [Catch-all routes](https://github.com/tkmpraveens/nextjs-learning/blob/main/routing/README.md#catch-all-routes)
-  - [Navigation of static and dynamic routes using Link and useRouter](https://github.com/tkmpraveens/nextjs-learning/blob/main/routing/README.md#catch-all-routes)
-  - [404 page](https://github.com/tkmpraveens/nextjs-learning/blob/main/routing/README.md#catch-all-routes)
+- **[/routing-concepts](https://github.com/tkmpraveens/nextjs-learning/tree/main/routing-concepts)**: File based routing
+  - [Pages](https://github.com/tkmpraveens/nextjs-learning/blob/main/routing-concepts/README.md#file-based-routing)
+  - [Static routes](https://github.com/tkmpraveens/nextjs-learning/blob/main/routing-concepts/README.md#static-routes)
+  - [Nested paths](https://github.com/tkmpraveens/nextjs-learning/blob/main/routing-concepts/README.md#nested-paths)
+  - [Dynamic routes](https://github.com/tkmpraveens/nextjs-learning/blob/main/routing-concepts/README.md#dynamic-routes)
+  - [Nested dynamic routes](https://github.com/tkmpraveens/nextjs-learning/blob/main/routing-concepts/README.md#nested-dynamic-routes)
+  - [Catch-all routes](https://github.com/tkmpraveens/nextjs-learning/blob/main/routing-concepts/README.md#catch-all-routes)
+  - [Navigation of static and dynamic routes using Link and useRouter](https://github.com/tkmpraveens/nextjs-learning/blob/main/routing-concepts/README.md#catch-all-routes)
+  - [404 page](https://github.com/tkmpraveens/nextjs-learning/blob/main/routing-concepts/README.md#catch-all-routes)
 - Server-side rendering
 - Static site generation
 - API integration
