@@ -1,11 +1,12 @@
 {
   "private": true,
+  "homepage": "https://github.com/tkmpraveens/nextjs-learning/routing-concepts/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "deploy": "npm run build && npm run export && git add . && git commit -m 'Deploying to gh-pages-routing-concepts branch' && git push -f origin gh-pages-routing-concepts"
+    "deploy": "npm run build && npm run export && gh-pages -d out"
   },
   "dependencies": {
     "next": "latest",
