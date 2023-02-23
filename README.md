@@ -6,7 +6,7 @@ Welcome to this repository which contains a collection of Next.js projects, each
 
 The projects in this repository are designed to showcase different features and capabilities of the Next.js framework. Here is a list of some of the projects included in this repository:
 
-- **[/routing-concepts](https://github.com/tkmpraveens/nextjs-learning/tree/main/routing-concepts)**: Pages and file based routing [[Simplified Documentation]](https://github.com/tkmpraveens/nextjs-learning/tree/main/routing-concepts) [[Live]](https://nextjs-learning-routing-concepts.netlify.app/) 
+- **[/routing-concepts](https://github.com/tkmpraveens/nextjs-learning/tree/main/routing-concepts)**: Pages and file based routing • [Simplified Documentation](https://github.com/tkmpraveens/nextjs-learning/tree/main/routing-concepts) • [Live](https://nextjs-learning-routing-concepts.netlify.app/) 
   - [Pages](https://github.com/tkmpraveens/nextjs-learning/blob/main/routing-concepts/README.md#file-based-routing)
   - [Static routes](https://github.com/tkmpraveens/nextjs-learning/blob/main/routing-concepts/README.md#static-routes)
   - [Nested paths](https://github.com/tkmpraveens/nextjs-learning/blob/main/routing-concepts/README.md#nested-paths)
