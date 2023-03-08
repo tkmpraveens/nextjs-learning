@@ -1,5 +1,20 @@
-const Home = () => {
-  return <div>Home page</div>;
+import { useEffect, useState } from "react";
+import Event from "./../components/events/event";
+import { getEventList } from "./../data/event-list";
+
+const HomePage = () => {
+  const [eventList, setEventList] = useState();
+
+  useEffect(() => {
+    const eventList = getEventList();
+    setEventList(eventList);
+  }, []);
+
+  return (
+    <div>
+      <Event title="Featured events" eventList={eventList} />
+    </div>
+  );
 };
 
-export default Home;
+export default HomePage;

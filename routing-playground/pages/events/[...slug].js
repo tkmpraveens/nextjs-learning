@@ -1,5 +1,5 @@
-const FilteredEventList = () => {
-  return <div>Filtered event list</div>;
+const FilteredEventListPage = () => {
+  return <div>Filtered event list page</div>;
 };
 
-export default FilteredEventList;
+export default FilteredEventListPage;

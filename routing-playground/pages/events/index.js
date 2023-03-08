@@ -1,5 +1,5 @@
-const EventList = () => {
-  return <div>Event list</div>;
+const EventListPage = (props) => {
+  return <div>EventListPage</div>;
 };
 
-export default EventList;
+export default EventListPage;
