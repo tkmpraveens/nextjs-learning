@@ -1,0 +1,53 @@
+.event {
+  display: grid;
+  padding: 0 5rem;
+  gap: 1rem;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &__header {
+    margin: 3rem 0 2rem 0;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    margin-bottom: 5rem;
+  }
+  &__card {
+    border-radius: 0.8rem;
+    box-shadow: 0 5px 10px -4px rgb(0 0 0 / 25%);
+    transition: box-shadow 200ms;
+    overflow: hidden;
+
+    &:hover {
+      box-shadow: 2px 5px 15px 0px rgb(0 0 0 / 25%);
+    }
+  }
+  &__content {
+    padding: 0 2rem;
+    display: grid;
+    gap: 1rem;
+  }
+  &__image {
+    height: 20rem;
+    width: auto;
+  }
+  &__title {
+    margin-top: 1rem;
+    font-weight: 500;
+  }
+  &__desc {
+    font-weight: 400;
+    line-height: 1.3;
+  }
+  &__location {
+    color: #777e8e;
+  }
+  &__date {
+    color: #777e8e;
+    margin-bottom: 1.5rem;
+  }
+}
