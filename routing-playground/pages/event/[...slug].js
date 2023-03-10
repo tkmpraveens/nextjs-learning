@@ -1,12 +1,19 @@
 import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+
+import { getFilteredEventList } from "@/data/event-list";
+
 import Event from "@/components/event/list/event";
-import { getEventList } from "@/data/event-list";
 
 const FilteredEventListPage = () => {
   const [eventList, setEventList] = useState([]);
+  const router = useRouter();
+
+  const year = router?.query?.year;
+  const month = router?.query?.month;
 
   useEffect(() => {
-    const eventList = getEventList();
+    const eventList = getFilteredEventList({ year, month });
     setEventList(eventList);
   }, []);
 
