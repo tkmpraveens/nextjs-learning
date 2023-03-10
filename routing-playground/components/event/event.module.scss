@@ -3,11 +3,14 @@
   height: 100vh;
   padding: 0 5rem;
   gap: 1rem;
+  grid-template-rows: repeat(2, min-content);
   overflow-x: hidden;
   overflow-y: auto;
 
   &__header {
     margin: 3rem 0 2rem 0;
+    font-size: 2rem;
+    font-weight: 600;
   }
 
   &__list {
@@ -62,8 +65,13 @@
     }
   }
   &__desc {
+    display: -webkit-box;
     font-weight: 400;
     line-height: 1.3;
+    margin-bottom: 1rem;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
   &__location {
     color: #777e8e;

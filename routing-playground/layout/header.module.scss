@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  height: 5rem;
+  padding: 0 5rem;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 5px 30px -4px rgb(0 0 0 / 7.5%);
+
+  &__logo {
+    position: relative;
+    text-transform: uppercase;
+    color: #b24592;
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #b24592, #f15f79);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 1rem;
+      height: 1rem;
+      bottom: 0.25rem;
+      right: -0.9rem;
+      background: #f15f79;
+      border-radius: 1rem;
+      transform: scale(0.6);
+      z-index: 1;
+    }
+  }
+  &__link {
+    color: #212529;
+    font-weight: 500;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}

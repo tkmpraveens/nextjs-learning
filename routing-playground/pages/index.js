@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import Event from "../components/event/event";
-import { getEventList } from "./../data/event-list";
+import { getFeaturedEventList } from "./../data/event-list";
 
 const HomePage = () => {
   const [eventList, setEventList] = useState();
 
   useEffect(() => {
-    const eventList = getEventList();
+    const eventList = getFeaturedEventList();
     setEventList(eventList);
   }, []);
 
