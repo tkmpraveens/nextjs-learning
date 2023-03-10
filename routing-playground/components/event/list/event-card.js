@@ -22,7 +22,7 @@ const EventCard = (props) => {
 
       <Link href={link}>
         <div className={classes.event__image}>
-          <img src={event.image} alt={event.title} />
+          <img src={`/${event.image}`} alt={event.title} />
         </div>
 
         <div className={classes.event__content}>

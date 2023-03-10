@@ -1,12 +1,20 @@
-import EventList from "./event-list";
 import classes from "./event.module.scss";
+
+import EventSearch from "../search/event-search";
+import EventList from "./event-list";
 
 const Event = (props) => {
   const { eventList, title } = props;
 
   return (
     <main className={classes.event}>
-      <h1 className={`title ${classes.event__header}`}>{title ?? "Events"}</h1>
+      <div className={classes.event__header}>
+        <h1 className={`title ${classes.event__heading}`}>
+          {title ?? "Events"}
+        </h1>
+
+        <EventSearch />
+      </div>
 
       {eventList && <EventList eventList={eventList} />}
 
