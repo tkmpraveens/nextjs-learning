@@ -9,27 +9,29 @@ const EventDetails = (props) => {
   return (
     <main className={classes["event-details"]}>
       <div className={classes["event-details__image"]}>
-        <img src={`../${event.image}`} alt={event.title} />
+        <img src={`/${event?.image}`} alt={event?.title} />
       </div>
 
       <section className={classes["event-details__summary"]}>
         <div className={classes["event-details__summary-image"]}>
-          <img src={`../${event.image}`} alt={event.title} />
+          <img src={`/${event?.image}`} alt={event?.title} />
         </div>
 
-        <h2 className={classes["event-details__title"]}>{event.title ?? ""}</h2>
+        <h2 className={classes["event-details__title"]}>
+          {event?.title ?? ""}
+        </h2>
 
         <p className={classes["event-details__desc"]}>
-          {event.description ?? ""}
+          {event?.description ?? ""}
         </p>
         <span className={classes["event-details__meta"]}>
           <span className={`${classes["event-details__location"]} inline-icon`}>
             <LocationIcon />
-            {event.location ?? ""}
+            {event?.location ?? ""}
           </span>
           <span className={`${classes["event-details__date"]} inline-icon`}>
             <CalenderIcon />
-            {event.date ?? ""}
+            {event?.date ?? ""}
           </span>
         </span>
       </section>

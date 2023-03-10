@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import { getEventList } from "@/data/event-list";
-import Event from "@/components/event/event";
+import Event from "@/components/event/list/event";
 
 const EventListPage = () => {
   const [eventList, setEventList] = useState([]);

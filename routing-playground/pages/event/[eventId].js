@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 import { getEventById } from "@/data/event-list";
-import EventDetails from "./../../components/event/event-details";
+import EventDetails from "./../../components/event/details/event-details";
 
 const EventDetailsPage = () => {
   const router = useRouter();
