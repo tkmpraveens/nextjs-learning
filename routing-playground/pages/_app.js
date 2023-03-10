@@ -1,4 +1,4 @@
-import "@/styles/globals.scss";
+import "@/styles/reset.scss";
 import "@/styles/common.scss";
 
 export default function App({ Component, pageProps }) {

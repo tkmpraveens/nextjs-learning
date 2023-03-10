@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Event from "./../components/events/event";
+import Event from "../components/event/event";
 import { getEventList } from "./../data/event-list";
 
 const HomePage = () => {

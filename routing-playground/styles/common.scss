@@ -4,3 +4,12 @@
 img {
   width: 100%;
 }
+.inline-icon {
+  display: flex;
+  align-items: center;
+
+  svg {
+    width: 2rem;
+    margin-right: 0.5rem;
+  }
+}
