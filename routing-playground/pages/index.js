@@ -12,7 +12,7 @@ const HomePage = () => {
 
   return (
     <div>
-      <Event title="Featured events" eventList={eventList} />
+      <Event title="Featured Events" eventList={eventList} />
     </div>
   );
 };
