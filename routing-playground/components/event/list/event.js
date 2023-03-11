@@ -17,9 +17,9 @@ const Event = (props) => {
         <EventSearch type={type} year={year} month={month} />
       </div>
 
-      {eventList && <EventList eventList={eventList} />}
+      {eventList?.length > 0 && <EventList eventList={eventList} />}
 
-      {eventList?.length === 0 && <EventEmpty />}
+      {eventList?.length === 0 && <EventEmpty year={year} month={month} />}
     </main>
   );
 };

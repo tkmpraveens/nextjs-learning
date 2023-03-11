@@ -25,9 +25,9 @@ const FilteredEventListPage = () => {
 
   const eventTitle =
     year || month
-      ? `All Events during ${year?.option !== "all" ? year?.label : ""} ${
-          month?.option !== "all" ? month?.label : ""
-        }`
+      ? `All Events during 
+      ${month?.option !== "all" ? month?.label : ""} 
+      ${year?.option !== "all" ? year?.label : ""} `
       : "All Events";
 
   return (
