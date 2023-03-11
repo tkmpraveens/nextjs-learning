@@ -20,10 +20,10 @@ const EventNotFound = () => {
           Event you are looking for does not exist!
         </h1>
         <p className={classes["event-empty__desc"]}>
-          Oops! The event you're looking for doesn't exist. Please check the URL
-          and try again. If you think this is an error, contact our support team
-          for help. Feel free to browse our website for other exciting events in
-          the meantime.
+          Oops! The event you&apos;re looking for doesn&apos;t exist. Please
+          check the URL and try again. If you think this is an error, contact
+          our support team for help. Feel free to browse our website for other
+          exciting events in the meantime.
         </p>
       </div>
     </div>

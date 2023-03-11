@@ -24,7 +24,7 @@ const EventSearch = (props) => {
         else if (type === "filter" || type === "all") router.push(`/event`);
       }
     }
-  }, [year, month]);
+  }, [year, month, type, router]);
 
   return (
     <form className={classes.search}>

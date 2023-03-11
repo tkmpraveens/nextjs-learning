@@ -31,10 +31,10 @@ const EventEmpty = (props) => {
         </div>
         <h1 className={classes["event-empty__title"]}>{title}</h1>
         <p className={classes["event-empty__desc"]}>
-          We couldn't find any events that match your search criteria. Don't
-          worry, we won't give up on you just yet! Please try broadening your
-          search parameters or trying a different filter to help us better
-          understand your event interests.
+          We couldn&apos;t find any events that match your search criteria.
+          Don&apos;t worry, we won&apos;t give up on you just yet! Please try
+          broadening your search parameters or trying a different filter to help
+          us better understand your event interests.
           <br />
           Thank you for using our website and happy event searching!
         </p>
