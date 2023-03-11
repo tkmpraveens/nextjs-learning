@@ -2,7 +2,9 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 import { getEventById } from "@/data/event-list";
+
 import EventDetails from "./../../components/event/details/event-details";
+import EventNotFound from "@/components/event/empty/event-not-found";
 
 const EventDetailsPage = () => {
   const router = useRouter();
@@ -15,7 +17,7 @@ const EventDetailsPage = () => {
   }, [eventId]);
 
   if (!event) {
-    return <p>Error</p>;
+    return <EventNotFound />;
   }
 
   return <EventDetails event={event} />;
