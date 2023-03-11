@@ -3,10 +3,9 @@ import Link from "next/link";
 import classes from "./event.module.scss";
 
 import { CalenderIcon } from "@/icons/calender";
-import { FavoriteIcon } from "@/icons/favorite";
+import { FeaturedIcon } from "@/icons/featured";
 import { LocationIcon } from "@/icons/location";
 
-import Button from "@/ui/button";
 import { formatDate } from "@/utils";
 
 const EventCard = (props) => {
@@ -15,11 +14,11 @@ const EventCard = (props) => {
 
   return (
     <li className={classes.event__card}>
-      <div className={classes.event__favorite}>
-        <Button>
-          <FavoriteIcon />
-        </Button>
-      </div>
+      {event.isFeatured && (
+        <div className={classes.event__featured}>
+          <FeaturedIcon /> Featured
+        </div>
+      )}
 
       <Link href={link}>
         <div className={classes.event__image}>

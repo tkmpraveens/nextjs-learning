@@ -110,27 +110,11 @@ export const getFilteredEventList = (year, month) => {
       })
       .toLowerCase();
 
-    if (year === "all" && month === "all") {
-      console.log("All");
-      return true;
-    } else {
-      if (month === "all") {
-        console.log("month all");
-        return eventYear === year;
-      } else if (year === "all") {
-        console.log("year all", eventMonth, month, eventMonth === month);
-        return eventMonth === month;
-      } else {
-        console.log(
-          "year and month",
-          eventYear,
-          year,
-          eventMonth,
-          month,
-          eventYear === year && eventMonth === month
-        );
-        return eventYear === year && eventMonth === month;
-      }
+    if (year === "all" && month === "all") return true;
+    else {
+      if (month === "all") return eventYear === year;
+      else if (year === "all") return eventMonth === month;
+      else return eventYear === year && eventMonth === month;
     }
   });
 
