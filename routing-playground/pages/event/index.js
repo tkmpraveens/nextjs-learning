@@ -13,7 +13,7 @@ const EventListPage = () => {
 
   return (
     <div>
-      <Event title="All Events" eventList={eventList} />
+      <Event type="all" title="All Events" eventList={eventList} />
     </div>
   );
 };

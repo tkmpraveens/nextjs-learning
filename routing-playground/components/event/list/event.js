@@ -4,7 +4,7 @@ import EventSearch from "../search/event-search";
 import EventList from "./event-list";
 
 const Event = (props) => {
-  const { eventList, title } = props;
+  const { type, title, eventList, year, month } = props;
 
   return (
     <main className={classes.event}>
@@ -13,7 +13,7 @@ const Event = (props) => {
           {title ?? "Events"}
         </h1>
 
-        <EventSearch />
+        <EventSearch type={type} year={year} month={month} />
       </div>
 
       {eventList && <EventList eventList={eventList} />}

@@ -8,23 +8,20 @@ import { monthList } from "./monthList";
 import Dropdown from "@/ui/dropdown/dropdown";
 import { useRouter } from "next/router";
 
-const EventSearch = () => {
+const EventSearch = (props) => {
   const router = useRouter();
+  const { type } = props;
 
-  const slug = router?.query?.slug ?? undefined;
-  const defaultYear = slug?.[0] ?? "all";
-  const defaultMonth = slug?.[1] ?? "all";
-
-  const [year, setYear] = useState(defaultYear);
-  const [month, setMonth] = useState(defaultMonth);
+  const [year, setYear] = useState(props.year ?? "all");
+  const [month, setMonth] = useState(props.month ?? "all");
 
   useEffect(() => {
-    console.log(slug, year, month);
     if (year && month) {
       if (year !== "all" || month !== "all") {
         router.push(`/event/${year}/${month}`);
-      } else if (year === "all" && month === "all" && slug) {
-        router.push(`/event`);
+      } else if (year === "all" && month === "all") {
+        if (type === "featured") router.push(`/`);
+        else if (type === "filter" || type === "all") router.push(`/event`);
       }
     }
   }, [year, month]);

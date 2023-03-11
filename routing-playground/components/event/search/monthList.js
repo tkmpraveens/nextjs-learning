@@ -13,3 +13,9 @@ export const monthList = [
   { option: "nov", label: "November" },
   { option: "dec", label: "December" },
 ];
+
+export const getMonthDetails = (m) => {
+  const month = monthList.filter((i) => i.option === m);
+  if (month?.length) return month[0];
+  else undefined;
+};

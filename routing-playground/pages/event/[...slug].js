@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 import { getFilteredEventList } from "@/data/event-list";
+import { getYearDetails } from "@/components/event/search/yearList";
+import { getMonthDetails } from "@/components/event/search/monthList";
 
 import Event from "@/components/event/list/event";
 
@@ -9,17 +11,34 @@ const FilteredEventListPage = () => {
   const [eventList, setEventList] = useState([]);
   const router = useRouter();
 
-  const year = router?.query?.year;
-  const month = router?.query?.month;
+  const slug = router?.query?.slug ?? undefined;
+  const yearParam = slug?.[0] ?? "all";
+  const monthParam = slug?.[1] ?? "all";
+
+  const year = getYearDetails(yearParam);
+  const month = getMonthDetails(monthParam);
 
   useEffect(() => {
-    const eventList = getFilteredEventList({ year, month });
+    const eventList = getFilteredEventList({ yearParam, monthParam });
     setEventList(eventList);
   }, []);
 
+  const eventTitle =
+    year || month
+      ? `All Events during ${year?.option !== "all" ? year?.label : ""} ${
+          month?.option !== "all" ? month?.label : ""
+        }`
+      : "All Events";
+
   return (
     <div>
-      <Event title="Filtered event list page" eventList={eventList} />
+      <Event
+        type="filter"
+        title={eventTitle}
+        year={yearParam}
+        month={monthParam}
+        eventList={eventList}
+      />
     </div>
   );
 };
