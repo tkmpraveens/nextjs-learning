@@ -2,9 +2,9 @@ import Image from "next/image";
 
 import classes from "./event-details.module.scss";
 
-import { CalenderIcon } from "@/icons/calender";
-import { LocationIcon } from "@/icons/location";
-import { FeaturedIcon } from "@/icons/featured";
+// import { CalenderIcon } from "@/icons/calender";
+// import { LocationIcon } from "@/icons/location";
+// import { FeaturedIcon } from "@/icons/featured";
 
 const EventDetails = (props) => {
   const { event } = props;
@@ -31,7 +31,7 @@ const EventDetails = (props) => {
           </div>
           {event?.isFeatured && (
             <div className={classes["event-details__featured"]}>
-              <FeaturedIcon />
+              {/* <FeaturedIcon /> */}
             </div>
           )}
         </div>
@@ -45,11 +45,11 @@ const EventDetails = (props) => {
         </p>
         <span className={classes["event-details__meta"]}>
           <span className={`${classes["event-details__location"]} inline-icon`}>
-            <LocationIcon />
+            {/* <LocationIcon /> */}
             {event?.location ?? ""}
           </span>
           <span className={`${classes["event-details__date"]} inline-icon`}>
-            <CalenderIcon />
+            {/* <CalenderIcon /> */}
             {event?.date ?? ""}
           </span>
         </span>
