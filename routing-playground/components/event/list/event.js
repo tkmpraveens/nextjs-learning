@@ -2,6 +2,7 @@ import classes from "./event.module.scss";
 
 import EventSearch from "../search/event-search";
 import EventList from "./event-list";
+import EventEmpty from "../empty/event-empty";
 
 const Event = (props) => {
   const { type, title, eventList, year, month } = props;
@@ -18,9 +19,7 @@ const Event = (props) => {
 
       {eventList && <EventList eventList={eventList} />}
 
-      {eventList?.length === 0 && (
-        <div className="event__empty">No events found!</div>
-      )}
+      {eventList?.length === 0 && <EventEmpty />}
     </main>
   );
 };

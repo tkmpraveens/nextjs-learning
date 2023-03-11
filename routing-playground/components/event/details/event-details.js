@@ -2,6 +2,7 @@ import classes from "./event-details.module.scss";
 
 import { CalenderIcon } from "@/icons/calender";
 import { LocationIcon } from "@/icons/location";
+import { FeaturedIcon } from "@/icons/featured";
 
 const EventDetails = (props) => {
   const { event } = props;
@@ -11,10 +12,15 @@ const EventDetails = (props) => {
       <div className={classes["event-details__image"]}>
         <img src={`/${event?.image}`} alt={event?.title} />
       </div>
-
       <section className={classes["event-details__summary"]}>
         <div className={classes["event-details__summary-image"]}>
           <img src={`/${event?.image}`} alt={event?.title} />
+
+          {event?.isFeatured && (
+            <div className={classes["event-details__featured"]}>
+              <FeaturedIcon />
+            </div>
+          )}
         </div>
 
         <h2 className={classes["event-details__title"]}>
