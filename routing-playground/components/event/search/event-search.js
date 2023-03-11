@@ -16,6 +16,10 @@ const EventSearch = (props) => {
   const [month, setMonth] = useState(props.month ?? "all");
 
   useEffect(() => {
+    initiateRedirection(year, month);
+  }, [year, month]);
+
+  const initiateRedirection = () => {
     if (year && month) {
       if (year !== "all" || month !== "all") {
         router.push(`/event/${year}/${month}`);
@@ -24,7 +28,7 @@ const EventSearch = (props) => {
         else if (type === "filter" || type === "all") router.push(`/event`);
       }
     }
-  }, [year, month, type, router]);
+  };
 
   return (
     <form className={classes.search}>
