@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import classes from "./event-details.module.scss";
 
 import { CalenderIcon } from "@/icons/calender";
@@ -10,12 +12,23 @@ const EventDetails = (props) => {
   return (
     <main className={classes["event-details"]}>
       <div className={classes["event-details__image"]}>
-        <img src={`/${event?.image}`} alt={event?.title} />
+        <Image
+          src={`/${event?.image}`}
+          alt={event?.title}
+          width={1600}
+          height={300}
+        />
       </div>
       <section className={classes["event-details__summary"]}>
         <div className={classes["event-details__summary-image"]}>
-          <img src={`/${event?.image}`} alt={event?.title} />
-
+          <div className={classes["event-details__thumbnail"]}>
+            <Image
+              src={`/${event?.image}`}
+              alt={event?.title}
+              width={150}
+              height={150}
+            />
+          </div>
           {event?.isFeatured && (
             <div className={classes["event-details__featured"]}>
               <FeaturedIcon />

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import classes from "./event.module.scss";
@@ -22,7 +23,12 @@ const EventCard = (props) => {
 
       <Link href={link}>
         <div className={classes.event__image}>
-          <img src={`/${event.image}`} alt={event.title} />
+          <Image
+            src={`/${event.image}`}
+            alt={event.title}
+            width={350}
+            height={200}
+          />
         </div>
 
         <div className={classes.event__content}>

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import classes from "./event-empty.module.scss";
 
 const EventNotFound = () => {
@@ -7,9 +9,11 @@ const EventNotFound = () => {
     >
       <div className={classes["event-empty__container"]}>
         <div className={classes["event-empty__icon"]}>
-          <img
+          <Image
             src="/images/event-empty.png"
             alt="Oops! No Events Match Your Filter"
+            width={500}
+            height={450}
           />
         </div>
         <h1 className={classes["event-empty__title"]}>

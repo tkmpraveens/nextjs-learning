@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import classes from "./event-empty.module.scss";
 
 import { getMonthDetails } from "../search/monthList";
@@ -20,9 +22,11 @@ const EventEmpty = (props) => {
     <div className={classes["event-empty"]}>
       <div className={classes["event-empty__container"]}>
         <div className={classes["event-empty__icon"]}>
-          <img
+          <Image
             src="/images/event-empty.png"
             alt="Oops! No events match your filter"
+            width={500}
+            height={450}
           />
         </div>
         <h1 className={classes["event-empty__title"]}>{title}</h1>
