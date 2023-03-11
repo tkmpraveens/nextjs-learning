@@ -19,9 +19,9 @@ const FilteredEventListPage = () => {
   const month = getMonthDetails(monthParam);
 
   useEffect(() => {
-    const eventList = getFilteredEventList({ yearParam, monthParam });
+    const eventList = getFilteredEventList(yearParam, monthParam);
     setEventList(eventList);
-  }, []);
+  }, [yearParam, monthParam]);
 
   const eventTitle =
     year || month

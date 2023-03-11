@@ -5,7 +5,7 @@ const EVENTS_LIST = [
     description:
       "PlanPerfect is your go-to platform for event management. Whether you're planning a small gathering or a large-scale conference, we've got you covered. Our easy-to-use platform allows you to manage every aspect of your event, from budgeting to scheduling and everything in between.",
     location: "New York, NY",
-    date: "June 1-3, 2023",
+    date: "2022-6-1",
     image: "images/1.jpg",
     isFeatured: false,
   },
@@ -15,7 +15,7 @@ const EVENTS_LIST = [
     description:
       "EventEase is designed to simplify event planning. Our platform is user-friendly, customizable, and feature-packed, enabling you to plan and execute events with ease. Our services include venue selection, vendor management, budget tracking, and more.",
     location: "Los Angeles, CA",
-    date: "September 15-17, 2023",
+    date: "2023-6-15",
     image: "images/2.jpg",
     isFeatured: true,
   },
@@ -25,7 +25,7 @@ const EVENTS_LIST = [
     description:
       "Celebrate with Style is a full-service event planning website that takes care of everything from start to finish. We offer customized event packages to suit your specific needs, ensuring that your event is a success.",
     location: "Chicago, IL",
-    date: "November 10-12, 2023",
+    date: "2022-11-10",
     image: "images/3.jpg",
     isFeatured: true,
   },
@@ -35,7 +35,7 @@ const EVENTS_LIST = [
     description:
       "Everyone can learn to code! Yes, everyone! In this live event, we are going to go through all the key basics and get you started with programming as well.",
     location: "Boston, MA",
-    date: "May 12-14, 2023",
+    date: "2023-5-12",
     image: "images/4.jpg",
     isFeatured: false,
   },
@@ -45,7 +45,7 @@ const EVENTS_LIST = [
     description:
       "We know: Networking is no fun if you are an introvert person. That's why we came up with this event - it'll be so much easier. Promised!",
     location: "Seattle, WA",
-    date: "July 7-9, 2023",
+    date: "2023-7-9",
     image: "images/5.jpg",
     isFeatured: true,
   },
@@ -55,7 +55,7 @@ const EVENTS_LIST = [
     description:
       "You probably need no help with networking in general. But focusing your energy correctly - that is something where most people can improve.",
     location: "Atlanta, GA",
-    date: "December 1-3, 2023",
+    date: "2023-12-31",
     image: "images/6.jpg",
     isFeatured: true,
   },
@@ -65,7 +65,7 @@ const EVENTS_LIST = [
     description:
       "EventPro is the perfect tool for event professionals who want to streamline their processes and take their events to the next level. Our platform includes features like guest management, ticketing, and real-time analytics to help you make data-driven decisions and deliver exceptional experiences.",
     location: "Miami, FL",
-    date: "October 27-29, 2023",
+    date: "2022-8-27",
     image: "images/7.jpg",
     isFeatured: false,
   },
@@ -75,7 +75,7 @@ const EVENTS_LIST = [
     description:
       "DreamEvents is where your vision becomes reality. Our team of experts will work with you to plan and execute your dream event, no matter how big or small. From concept to cleanup, we'll be with you every step of the way.",
     location: "San Francisco, CA",
-    date: "August 5-7, 2023",
+    date: "2023-10-14",
     image: "images/8.jpg",
     isFeatured: true,
   },
@@ -85,7 +85,7 @@ const EVENTS_LIST = [
     description:
       "The Event Co. is your partner in planning. We offer a comprehensive suite of event management services, including design, production, and logistics. With our team of seasoned professionals, you can be sure your event will be a success.",
     location: "Austin, TX",
-    date: "April 20-22, 2023",
+    date: "2022-4-20",
     image: "images/9.jpg",
     isFeatured: true,
   },
@@ -99,14 +99,39 @@ export const getEventList = () => {
   return EVENTS_LIST;
 };
 
-export const getFilteredEventList = (dateFilter) => {
-  const { year, month } = dateFilter;
-
+export const getFilteredEventList = (year, month) => {
   let filteredEventList = EVENTS_LIST.filter((event) => {
     const eventDate = new Date(event.date);
-    return (
-      eventDate.getFullYear() === year && eventDate.getMonth() === month - 1
-    );
+
+    const eventYear = eventDate.getFullYear().toString();
+    const eventMonth = eventDate
+      .toLocaleDateString("en-US", {
+        month: "short",
+      })
+      .toLowerCase();
+
+    if (year === "all" && month === "all") {
+      console.log("All");
+      return true;
+    } else {
+      if (month === "all") {
+        console.log("month all");
+        return eventYear === year;
+      } else if (year === "all") {
+        console.log("year all", eventMonth, month, eventMonth === month);
+        return eventMonth === month;
+      } else {
+        console.log(
+          "year and month",
+          eventYear,
+          year,
+          eventMonth,
+          month,
+          eventYear === year && eventMonth === month
+        );
+        return eventYear === year && eventMonth === month;
+      }
+    }
   });
 
   return filteredEventList;

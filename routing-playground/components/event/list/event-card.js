@@ -7,6 +7,7 @@ import { FavoriteIcon } from "@/icons/favorite";
 import { LocationIcon } from "@/icons/location";
 
 import Button from "@/ui/button";
+import { formatDate } from "@/utils";
 
 const EventCard = (props) => {
   const { event } = props;
@@ -35,7 +36,7 @@ const EventCard = (props) => {
           </span>
           <span className={`${classes.event__date} inline-icon`}>
             <CalenderIcon />
-            {event.date ?? ""}
+            {formatDate(event.date) ?? ""}
           </span>
         </div>
       </Link>
