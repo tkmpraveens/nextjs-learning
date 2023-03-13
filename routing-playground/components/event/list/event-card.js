@@ -7,7 +7,7 @@ import { CalenderIcon } from "@/icons/calender";
 import { FeaturedIcon } from "@/icons/featured";
 import { LocationIcon } from "@/icons/location";
 
-import { formatDate } from "@/utils";
+import { formatDate, imageLoader } from "@/utils";
 
 const EventCard = (props) => {
   const { event } = props;
@@ -24,7 +24,8 @@ const EventCard = (props) => {
       <Link href={link}>
         <div className={classes.event__image}>
           <Image
-            src={`/${event.image}`}
+            loader={imageLoader}
+            src={event.image}
             alt={event.title}
             width={350}
             height={200}

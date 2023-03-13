@@ -6,6 +6,8 @@ import { CalenderIcon } from "@/icons/calender";
 import { LocationIcon } from "@/icons/location";
 import { FeaturedIcon } from "@/icons/featured";
 
+import { imageLoader } from "@/utils";
+
 const EventDetails = (props) => {
   const { event } = props;
 
@@ -13,7 +15,8 @@ const EventDetails = (props) => {
     <main className={classes["event-details"]}>
       <div className={classes["event-details__image"]}>
         <Image
-          src={`/${event?.image}`}
+          loader={imageLoader}
+          src={event?.image}
           alt={event?.title}
           width={1600}
           height={300}
@@ -23,7 +26,8 @@ const EventDetails = (props) => {
         <div className={classes["event-details__summary-image"]}>
           <div className={classes["event-details__thumbnail"]}>
             <Image
-              src={`/${event?.image}`}
+              loader={imageLoader}
+              src={event?.image}
               alt={event?.title}
               width={150}
               height={150}
