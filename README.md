@@ -9,7 +9,7 @@ The projects in this repository are designed to showcase different features and 
 - **Pages and file based routing:**
 
     For simplified documentation on routing, visit [/routing-concepts](https://github.com/tkmpraveens/nextjs-learning/tree/main/routing-concepts) • [**Live**](https://nextjs-learning-routing-concepts.netlify.app/) <br/>
-    For full-fledged product with routing, visit [/routing-playground](https://github.com/tkmpraveens/nextjs-learning/tree/main/routing-playground) • [**Live**](https://nextjs-learning-routing-concepts.netlify.app/)
+    For full-fledged product with routing, visit [/routing-playground](https://github.com/tkmpraveens/nextjs-learning/tree/main/routing-playground) • [**Live**](https://nextjs-learning-routing-playground.netlify.app/)
 
   - [Pages](https://github.com/tkmpraveens/nextjs-learning/blob/main/routing-concepts/README.md#file-based-routing)
   - [Static routes](https://github.com/tkmpraveens/nextjs-learning/blob/main/routing-concepts/README.md#static-routes)
