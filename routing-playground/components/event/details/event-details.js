@@ -6,7 +6,7 @@ import { CalenderIcon } from "@/icons/calender";
 import { LocationIcon } from "@/icons/location";
 import { FeaturedIcon } from "@/icons/featured";
 
-import { imageLoader } from "@/utils";
+import { formatDate, imageLoader } from "@/utils";
 
 const EventDetails = (props) => {
   const { event } = props;
@@ -48,13 +48,13 @@ const EventDetails = (props) => {
           {event?.description ?? ""}
         </p>
         <span className={classes["event-details__meta"]}>
-          <span className={`${classes["event-details__location"]} inline-icon`}>
+          <span className="inline-icon">
             <LocationIcon />
             {event?.location ?? ""}
           </span>
           <span className={`${classes["event-details__date"]} inline-icon`}>
             <CalenderIcon />
-            {event?.date ?? ""}
+            {formatDate(event?.date) ?? ""}
           </span>
         </span>
       </section>

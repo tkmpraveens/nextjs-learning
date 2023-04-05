@@ -24,6 +24,7 @@
     gap: 2rem;
     margin-bottom: 10rem;
   }
+
   &__card {
     position: relative;
     box-shadow: 0 5px 10px -4px rgb(0 0 0 / 25%);
@@ -36,11 +37,13 @@
       box-shadow: 2px 5px 15px 0px rgb(0 0 0 / 25%);
     }
   }
+
   &__content {
     display: grid;
     padding: 0 2rem;
     gap: 1rem;
   }
+
   &__image {
     display: flex;
     justify-content: center;
@@ -54,10 +57,12 @@
       height: 100%;
     }
   }
+
   &__title {
     margin-top: 1rem;
     font-weight: 500;
   }
+
   &__featured {
     display: flex;
     position: absolute;
@@ -83,6 +88,7 @@
       filter: drop-shadow(0 0 5px #f39c12);
     }
   }
+
   &__desc {
     display: -webkit-box;
     font-weight: 400;
@@ -92,6 +98,7 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+
   &__location {
     color: #777e8e;
 
@@ -99,6 +106,7 @@
       transform: translateX(-0.2rem);
     }
   }
+
   &__date {
     color: #777e8e;
     margin-bottom: 2rem;
