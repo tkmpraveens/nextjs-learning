@@ -2,22 +2,16 @@ import Image from "next/image";
 
 import classes from "./event-empty.module.scss";
 
-import { getMonthDetails } from "../search/monthList";
-import { getYearDetails } from "../search/yearList";
-
 import { imageLoader } from "@/utils";
 
 const EventEmpty = (props) => {
   const { year, month } = props;
 
-  const yearDetails = getYearDetails(year);
-  const monthDetails = getMonthDetails(month);
-
   const title =
     year || month
       ? `Oops! No events match for 
-      ${monthDetails?.option !== "all" ? monthDetails?.label : ""} 
-      ${yearDetails?.option !== "all" ? yearDetails?.label : ""} `
+      ${month?.option !== "all" ? month?.label : ""} 
+      ${year?.option !== "all" ? year?.label : ""} `
       : "Oops! No events match your filter";
 
   return (
