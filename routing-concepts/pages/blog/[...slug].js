@@ -3,8 +3,6 @@ import { useRouter } from "next/router";
 const BlogDetails = () => {
   const router = useRouter();
 
-  console.log(router.query);
-
   return (
     <main className="main">
       <h1 className="title">Blog Details</h1>
